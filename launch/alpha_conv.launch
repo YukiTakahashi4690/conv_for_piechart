@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="conv_for_piechart" type="alpha_float32.py" name="alpha_conv_node" output="screen"/>
+</launch>

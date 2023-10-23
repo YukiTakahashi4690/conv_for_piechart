@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 from std_msgs.msg import Float32
 from geometry_msgs.msg import Twist
@@ -6,6 +6,7 @@ from geometry_msgs.msg import Twist
 class conv_node():
     def __init__(self):
         rospy.init_node("cmdvel2float32", anonymous=True)
+        # self.sub = rospy.Subscriber("/nav_vel", Twist, self.callback)
         self.sub = rospy.Subscriber("/cmd_vel", Twist, self.callback)
         self.pub = rospy.Publisher("for_piechart", Float32, queue_size=1)
         self.cmd_vel = 0
